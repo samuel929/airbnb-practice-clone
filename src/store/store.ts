@@ -1,11 +1,11 @@
 import { configureStore , combineReducers } from '@reduxjs/toolkit';
 import counterReducer from '../Slices/slice';
 import popupReducer from '../Slices/popup';
-
+import loginPopupReducer from '../Slices/loginPopUp';
 const rootReducer = combineReducers({
     counter: counterReducer,
     popup: popupReducer,
-    // Add more reducers as needed
+    loginPopUp:loginPopupReducer
   });
   
 

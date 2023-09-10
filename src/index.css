@@ -145,7 +145,7 @@ code {
 
 .form{
   width:550px;
-  height:660px;
+  height:66%px;
   background-color: white;
   border-radius: 8px;
   z-index: 99;
@@ -164,4 +164,43 @@ code {
   font-weight: 500;
   float: left;
   font-size: 30px;
+}
+
+.border-login{
+  border:1px solid #919191;
+  width:100%;
+  border-radius: 8px;
+  height:50px;
+  margin:10px 0 10px 0;
+}
+
+.continue-button{
+  border:1px solid #dd1162;
+  background-color:#dd1162 ;
+  width:100%;
+  border-radius: 8px;
+  margin:10px 0 10px 0;
+  font-family: var(--font-family);
+  color:white;
+  height:50px;
+  cursor: pointer;
+}
+
+.input-form{
+  border: 1px solid #d8d8d8 ;
+  border-radius: 8px;
+  width:96%;
+  height:30px;
+  padding:10px;
+}
+
+.input-form:focus{
+  outline: none;
+  border: 2px solid black;
+}
+
+
+.error-color{
+  color:red;
+  float: left;
 }

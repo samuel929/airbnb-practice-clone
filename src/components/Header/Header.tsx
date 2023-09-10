@@ -6,13 +6,14 @@ import {RxHamburgerMenu} from "react-icons/rx";
 import {FaUserCircle} from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../store/store';
-import { open} from '../../Slices/popup';
+import { openPop} from '../../Slices/popup';
 import LoginPopup from './popup/loginPopup';
 import LoginSignUpForm from '../LoginSignUpForm/LoginSignUpForm';
 function Header() {
 
     const dispatch = useDispatch();
     const openLoginPopup = useSelector((state: RootState) => state.popup);
+    const openLoginGooglePopup=useSelector((state:RootState)=>state.loginPopUp)
   return (
     <div className='header-flex-container'>
          <div className='flex'>
@@ -41,7 +42,7 @@ function Header() {
              <div>
                  <BsGlobe fontSize={25} style={{position:"relative",top:"10px",cursor:"pointer"}}/>
              </div>
-             <div className='login-menu-holder' onClick={()=>dispatch(open())}>
+             <div className='login-menu-holder' onClick={()=>dispatch(openPop())}>
                  <RxHamburgerMenu color='#b0b0b0'style={{position:"relative",top:"4px",left:"5px",cursor:"pointer"}} fontSize={20}/>
                  <FaUserCircle color='#b0b0b0' style={{position:"relative",left:"20px",cursor:"pointer"}} fontSize={30}/>
              </div>
@@ -49,7 +50,9 @@ function Header() {
          {
            openLoginPopup &&  <LoginPopup/>
          }
-          <LoginSignUpForm/>
+         {
+             openLoginGooglePopup &&  <LoginSignUpForm/>
+         }
     </div>
   )
 }

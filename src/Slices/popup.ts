@@ -4,9 +4,10 @@ const popUpSlice=createSlice({
     name:"popup",
     initialState:false,
     reducers:{
-        open:(state:boolean)=>!state,
+        openPop:(state:boolean)=>!state,
+        close:(state:boolean)=>state=false
     }
 })
 
-export const {open}=popUpSlice.actions;
+export const {openPop,close}=popUpSlice.actions;
 export default popUpSlice.reducer;
