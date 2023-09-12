@@ -224,4 +224,10 @@ font-family: var(--font-family);
 position: fixed;
 top:90%;
 cursor: pointer;
+z-index: 99;
+}
+
+.center-map-button{
+  display: flex;
+  justify-content: center;
 }

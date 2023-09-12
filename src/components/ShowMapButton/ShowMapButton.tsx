@@ -1,9 +1,13 @@
 import React from 'react'
 import {BsMapFill} from 'react-icons/bs'
-function ShowMapButton() {
+interface Props{
+  ShowHideMap:()=>void;
+  showMap:boolean
+}
+function ShowMapButton({ShowHideMap,showMap}:Props) {
   return (
-    <button className='show-map-button'>
-        Show map <BsMapFill color='white' style={{position:"relative",top:"3px"}}/>
+    <button className='show-map-button' onClick={ShowHideMap}>
+       {showMap ? "Hide Map":"Show map"}  <BsMapFill color='white' style={{position:"relative",top:"3px"}}/>
     </button>
   )
 }
