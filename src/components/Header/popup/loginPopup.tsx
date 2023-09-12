@@ -6,8 +6,8 @@ function LoginPopup() {
   const dispatch = useDispatch();
 
  const openLoginPopUp=()=>{
-  dispatch(close())
-  dispatch(open())
+  dispatch(close());
+  dispatch(open());
  }
 
   return (

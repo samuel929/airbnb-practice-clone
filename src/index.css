@@ -194,6 +194,15 @@ code {
   padding:10px;
 }
 
+.is-invalid{
+  border: 1px solid red ;
+  border-radius: 8px;
+  width:96%;
+  height:30px;
+  padding:10px;
+
+}
+
 .input-form:focus{
   outline: none;
   border: 2px solid black;
@@ -203,4 +212,16 @@ code {
 .error-color{
   color:red;
   float: left;
+}
+
+.show-map-button{
+  background-color: #222222;
+color:white;
+border-radius:80px;
+padding:15px;
+border:1px solid #222222;
+font-family: var(--font-family);
+position: fixed;
+top:90%;
+cursor: pointer;
 }
