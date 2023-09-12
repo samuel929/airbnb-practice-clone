@@ -4,6 +4,9 @@ import Header from './components/Header/Header';
 import ShowMapButton from './components/ShowMapButton/ShowMapButton';
 import ReactMapboxGl,{Layer,Feature} from 'react-mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import Cards from './components/Card/Card';
+import Grid from '@mui/material/Grid';
+import IconBanner from './components/IconBanner/IconBanner';
 function App() {
  const [showMap,setShowMap]=useState<boolean>(false)
 const Map = ReactMapboxGl({
@@ -17,8 +20,9 @@ const ShowHideMap=()=>{
   return (
     <div className="App">
        <Header/>
+       <IconBanner/>
        {
-         showMap && (
+         showMap ?(
           <Map
           style="mapbox://styles/mapbox/streets-v9"
           center={[28.044379492577264,-26.208418213507905]}
@@ -31,6 +35,82 @@ const ShowHideMap=()=>{
             <Feature coordinates={[770307.8000000007, 786904.5999999996]} />
           </Layer>
         </Map>
+         ):
+         (
+           <>
+            <Grid container spacing={0.5} style={{margin:"40px 0 40px 25px "}}>
+           <Grid item xs={3} md={3}>
+         <Cards/>
+        </Grid>
+        <Grid item xs={3} md={3}>
+        <Cards/>
+        </Grid>
+        <Grid item xs={3} md={3}>
+        <Cards/>
+        </Grid>
+        <Grid item xs={3} md={3}>
+        <Cards/>
+        </Grid>  
+          </Grid>
+          <Grid container spacing={0.5} style={{margin:"40px 0 40px 25px "}}>
+           <Grid item xs={3} md={3}>
+         <Cards/>
+        </Grid>
+        <Grid item xs={3} md={3}>
+        <Cards/>
+        </Grid>
+        <Grid item xs={3} md={3}>
+        <Cards/>
+        </Grid>
+        <Grid item xs={3} md={3}>
+        <Cards/>
+        </Grid>  
+          </Grid>
+          <Grid container spacing={0.5} style={{margin:"40px 0 40px 25px "}}>
+           <Grid item xs={3} md={3}>
+         <Cards/>
+        </Grid>
+        <Grid item xs={3} md={3}>
+        <Cards/>
+        </Grid>
+        <Grid item xs={3} md={3}>
+        <Cards/>
+        </Grid>
+        <Grid item xs={3} md={3}>
+        <Cards/>
+        </Grid>  
+          </Grid>
+          <Grid container spacing={0.5} style={{margin:"40px 0 40px 25px "}}>
+           <Grid item xs={3} md={3}>
+         <Cards/>
+        </Grid>
+        <Grid item xs={3} md={3}>
+        <Cards/>
+        </Grid>
+        <Grid item xs={3} md={3}>
+        <Cards/>
+        </Grid>
+        <Grid item xs={3} md={3}>
+        <Cards/>
+        </Grid>  
+          </Grid>
+          <Grid container spacing={0.5} style={{margin:"40px 0 40px 25px "}}>
+           <Grid item xs={3} md={3}>
+         <Cards/>
+        </Grid>
+        <Grid item xs={3} md={3}>
+        <Cards/>
+        </Grid>
+        <Grid item xs={3} md={3}>
+        <Cards/>
+        </Grid>
+        <Grid item xs={3} md={3}>
+        <Cards/>
+        </Grid>  
+          </Grid>
+           </>
+         
+          
          )
        }
       
@@ -38,7 +118,8 @@ const ShowHideMap=()=>{
        <ShowMapButton showMap={showMap} ShowHideMap={ShowHideMap}/>
        </div>
     </div>
-  );
+  );       
+
 }
 
 export default App;
